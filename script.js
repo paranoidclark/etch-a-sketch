@@ -1,5 +1,7 @@
 function sixteenGrids(gridNum) {
     let mainDiv = document.querySelector('.main')
+    mainDiv.innerHTML = '';
+    gridInput.focus();
     let mainDivWidth = 600;
     let mainDivHeight = 600;
 
@@ -26,5 +28,12 @@ function sixteenGrids(gridNum) {
     }
 }
 
-let gridnum = document.querySelector('#gridnum');
-sixteenGrids(gridnum.value)
+let gridInput = document.querySelector('#gridnum');
+gridInput.addEventListener('input', function () {
+    let gridNum = parseInt(gridInput.value);
+    if (isNaN(gridNum) || gridNum < 1 || gridNum > 100) {
+        alert('Please enter a valid number between 1 and 100.');
+        return;
+    }
+    sixteenGrids(gridNum);
+});
