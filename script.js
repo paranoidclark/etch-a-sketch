@@ -18,10 +18,12 @@ function sixteenGrids(gridNum) {
             sketchSquare.style.cssText = "box-sizing: border-box; border: 0.2px solid black;"
             sketchSquare.style.width = sketchSquareWidth + 'px';
             sketchSquare.style.height = sketchSquareHeight + 'px';
+            sketchSquare.addEventListener("mouseover", function () {
+                sketchSquare.style.backgroundColor = '#F8EFBA';
+            });
             sketchRow.appendChild(sketchSquare)
         }
     }
-
 }
 
 let gridnum = document.querySelector('#gridnum');
