@@ -1,0 +1,25 @@
+body {
+    background-color: #222f3e;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2em;
+    margin: 0;
+    padding: 0;
+    color: #F8EFBA;
+}
+
+.main {
+    background-color: white;
+    padding: 0;
+    width: 600px;
+    height: 600px;
+    display: flex;
+    flex-direction: column;
+    border: 0.2px solid black;
+}
+
+#gridnum {
+    width: 5em;
+}
